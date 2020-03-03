@@ -85,13 +85,13 @@ def coppywindows(lista,ttype):
         shutil.copyfile(i,x + "\\\\" + ttype + "\\\\" + j)
 
 def sendmail(oss,mail,flin):
-    from_addr='1136295447@qq.com'
-    password="jewmsmhvssbliife" #注意此处输入的密码是自己设置的协议密码
+    from_addr='@qq.com'
+    password="" #注意此处输入的密码是自己设置的协议密码
     to_addr = mail
     smtp_server='smtp.qq.com'
 
     msg=MIMEMultipart()
-    msg['From']="1136295447@qq.com <1136295447@qq.com>"
+    msg['From']="@qq.com <@qq.com>"
     msg['To']= mail + ' ' + '<' + mail + '>'
     msg['Subject']=Header('实验验证','utf-8').encode()
     msg.attach(MIMEText('实验验证','plain','utf-8'))
